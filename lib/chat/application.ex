@@ -6,13 +6,12 @@ defmodule Chat.Application do
   use Application
 
   def start(_type, _args) do
-    import Supervisor.Spec
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Chat.Repo, []),
+      Chat.Repo,
       # Start the endpoint when the application starts
-      supervisor(ChatWeb.Endpoint, [])
+      ChatWeb.Endpoint
       # Starts a worker by calling: Chat.Worker.start_link(arg)
       # {Chat.Worker, arg},
     ]
