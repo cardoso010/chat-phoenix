@@ -2,6 +2,7 @@
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
 import css from "../css/app.css";
+import "bootstrap";
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
@@ -44,3 +45,7 @@ msg.addEventListener("keypress", function(event) {
     msg.value = ""; // reset the message input field for next message.
   }
 });
+
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;

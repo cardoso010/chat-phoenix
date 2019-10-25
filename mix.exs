@@ -50,7 +50,9 @@ defmodule Chat.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:excoveralls, "~> 0.7.0", only: [:test, :dev]}
+      {:excoveralls, "~> 0.7.0", only: [:test, :dev]},
+      {:guardian, "~> 2.0"},
+      {:argon2_elixir, "~> 2.1"}
     ]
   end
 

@@ -42,6 +42,7 @@ defmodule ChatWeb do
       import ChatWeb.ErrorHelpers
       import ChatWeb.Gettext
       alias ChatWeb.Router.Helpers, as: Routes
+      import ChatWeb.ViewHelper
     end
   end
 

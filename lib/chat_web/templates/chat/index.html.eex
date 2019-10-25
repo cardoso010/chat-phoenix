@@ -1,0 +1,11 @@
+<!-- The list of messages will appear here: -->
+<ul id='msg-list' style='list-style: none; min-height:200px; padding: 10px;'></ul>
+
+<div class="row">
+  <input type="hidden" id="name" class="form-control" placeholder="Your Name" autofocus value="<%= current_user(@conn).name %>">
+  <div class="col">
+    <input type="text" id="msg" class="form-control" placeholder="Your Message" autofocus>
+  </div>
+</div>
+
+

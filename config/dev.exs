@@ -74,3 +74,8 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# Configures Guardian
+config :chat, Chat.Accounts.Guardian,
+  issuer: "chat",
+  secret_key: "xiIsyVnrzU8gjZ7Wq/RfeXqA3YJBE+9FKICbDj56bOJvgcUAO11I0ssTp6QzAU50"

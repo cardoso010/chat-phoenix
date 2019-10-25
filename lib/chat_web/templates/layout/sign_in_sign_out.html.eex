@@ -1,0 +1,13 @@
+<%= if logged_in?(@conn) do %>
+    <%= gettext "Bem vindo!! %{nome}", nome: current_user(@conn).name %>
+    <div class="col p-0 m-0">
+        <%= link "Logout", to: Routes.auth_path(@conn, :logout), class: "btn btn-danger my-2 my-sm-0" %>
+    </div>
+<% else %>
+    <div class="col p-0 m-0">
+        <%= link "Login", to: Routes.auth_path(@conn, :login), class: "btn btn-secondary my-2 my-sm-0" %>
+    </div>
+    <div class="col p-0 m-0">
+        <%= link "Sign up", to: Routes.user_path(@conn, :new), class: "btn btn-primary my-2 my-sm-0" %>
+    </div>
+<% end %>

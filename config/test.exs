@@ -16,3 +16,8 @@ config :chat, ChatWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Configures Guardian
+config :chat, Chat.Accounts.Guardian,
+  issuer: "chat",
+  secret_key: "xiIsyVnrzU8gjZ7Wq/RfeXqA3YJBE+9FKICbDj56bOJvgcUAO11I0ssTp6QzAU50"

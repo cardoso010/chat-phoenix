@@ -27,6 +27,11 @@ config :chat, Chat.Repo,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
 
+# Configures Guardian
+config :chat, Chat.Accounts.Guardian,
+  issuer: "chat",
+  secret_key: "xiIsyVnrzU8gjZ7Wq/RfeXqA3YJBE+9FKICbDj56bOJvgcUAO11I0ssTp6QzAU50"
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
